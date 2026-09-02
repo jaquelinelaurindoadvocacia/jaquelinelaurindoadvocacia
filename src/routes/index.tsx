@@ -118,7 +118,7 @@ function Index() {
               atendimento online para clientes de <strong>todo o Brasil</strong>.
             </p>
             <div className="mt-8">
-              <WhatsAppButton>Falar com a advogada pelo WhatsApp</WhatsAppButton>
+              <WhatsAppButton origem="home-hero">Falar com a advogada pelo WhatsApp</WhatsAppButton>
               <p className="mt-4 text-xs tracking-wide text-muted-foreground">
                 São Sebastião do Paraíso/MG&nbsp; | &nbsp;Atendimento online em todo o Brasil
               </p>
@@ -162,7 +162,7 @@ function Index() {
             </p>
           </div>
           <div className="mt-9">
-            <WhatsAppButton>Quero analisar meu caso</WhatsAppButton>
+            <WhatsAppButton origem="home-dor">Quero analisar meu caso</WhatsAppButton>
           </div>
         </div>
       </section>
@@ -197,7 +197,7 @@ function Index() {
           </div>
 
           <div className="mt-12 text-center">
-            <WhatsAppButton>Quero falar sobre meu benefício</WhatsAppButton>
+            <WhatsAppButton origem="home-previdenciario">Quero falar sobre meu benefício</WhatsAppButton>
           </div>
         </div>
       </section>
@@ -284,7 +284,7 @@ function Index() {
             ))}
           </div>
           <div className="mt-8">
-            <WhatsAppButton variant="outline" message={mensagens.geral}>
+            <WhatsAppButton variant="outline" origem="home-outras-areas" message={mensagens.geral}>
               Falar sobre outra área
             </WhatsAppButton>
           </div>
@@ -332,7 +332,7 @@ function Index() {
                 atendimento online para clientes de todo o Brasil.
               </p>
               <div className="mt-8">
-                <WhatsAppButton>Falar com a advogada</WhatsAppButton>
+                <WhatsAppButton origem="home-presencial">Falar com a advogada</WhatsAppButton>
               </div>
             </div>
             <div className="self-center">
@@ -360,7 +360,7 @@ function Index() {
             Seu caso merece uma análise individual.
           </p>
           <div className="mt-9">
-            <WhatsAppButton variant="light">Falar com a advogada</WhatsAppButton>
+            <WhatsAppButton variant="light" origem="home-chamada-final">Falar com a advogada</WhatsAppButton>
           </div>
         </div>
       </section>
