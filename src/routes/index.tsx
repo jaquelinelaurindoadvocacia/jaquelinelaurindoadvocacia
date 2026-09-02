@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImage from "@/assets/jaqueline-hero.jpg";
+import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
+import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
 import { site, mensagens, whatsappLink } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
+
 
 const SEO_TITLE =
   "Jaqueline Laurindo Advocacia | Direito Previdenciário em São Sebastião do Paraíso";
