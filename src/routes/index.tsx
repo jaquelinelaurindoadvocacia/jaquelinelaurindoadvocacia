@@ -398,21 +398,29 @@ function Index() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <WhatsAppButton className="w-full">WhatsApp</WhatsAppButton>
+              <WhatsAppButton className="w-full" origem="home-contato">
+                WhatsApp
+              </WhatsAppButton>
+              <Link
+                to="/contato"
+                className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-bordo/35 px-7 py-4 text-[0.95rem] font-semibold text-bordo transition-colors hover:bg-bordo hover:text-primary-foreground"
+              >
+                Enviar mensagem pelo formulário
+              </Link>
               {site.instagram ? (
                 <a
                   href={site.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-bordo/35 px-7 py-4 text-[0.95rem] font-semibold text-bordo transition-colors hover:bg-bordo hover:text-primary-foreground"
+                  className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-border px-7 py-4 text-[0.95rem] font-semibold text-foreground transition-colors hover:border-bordo/35 hover:text-bordo"
                 >
-                  Instagram
+                  {site.instagramHandle}
                 </a>
               ) : null}
               {site.email ? (
                 <a
                   href={`mailto:${site.email}`}
-                  className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-border px-7 py-4 text-[0.95rem] font-semibold text-foreground transition-colors hover:border-bordo/35 hover:text-bordo"
+                  className="inline-flex min-h-[52px] w-full items-center justify-center break-all rounded-full border border-border px-7 py-4 text-center text-[0.9rem] font-semibold text-foreground transition-colors hover:border-bordo/35 hover:text-bordo"
                 >
                   {site.email}
                 </a>
@@ -422,18 +430,8 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border py-8">
-        <div className="mx-auto max-w-5xl px-5 text-center text-xs leading-relaxed text-muted-foreground">
-          <p>
-            {site.nome} — Direito Previdenciário, Civil, Trabalhista e Imobiliário. {site.cidade}.
-          </p>
-          <p className="mt-2">
-            Este site tem caráter meramente informativo, em conformidade com o Código de
-            Ética e Disciplina da OAB. Não há captação de clientela nem promessa de
-            resultado.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
+
 
       <WhatsAppFloating />
     </div>
