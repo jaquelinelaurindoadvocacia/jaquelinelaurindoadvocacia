@@ -12,10 +12,11 @@ export const site = {
   whatsapp: "5535997145067",
 
   /** Ex.: "https://instagram.com/seuperfil" */
-  instagram: "",
+  instagram: "https://instagram.com/jaquelinelaurindoadvogada",
+  instagramHandle: "@jaquelinelaurindoadvogada",
 
   /** Ex.: "contato@exemplo.com.br" */
-  email: "",
+  email: "jaquelinelaurindoadvocacia@gmail.com",
 
   /** Ex.: "OAB/MG 000.000" */
   oab: "OAB/MG 167.232",

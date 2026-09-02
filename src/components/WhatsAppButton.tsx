@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
 import { mensagens, whatsappLink } from "@/config/site";
+import { registrarCliqueWhatsapp } from "@/lib/tracking";
 
 type Props = {
   children: ReactNode;
   message?: string;
   variant?: "solid" | "outline" | "light";
   className?: string;
+  /** Identificação do botão para o relatório de cliques */
+  origem?: string;
 };
 
 const base =
@@ -33,12 +36,14 @@ export function WhatsAppButton({
   message = mensagens.previdenciario,
   variant = "solid",
   className = "",
+  origem = "botao",
 }: Props) {
   return (
     <a
       href={whatsappLink(message)}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => registrarCliqueWhatsapp(origem)}
       className={`${base} ${variants[variant]} ${className}`}
     >
       <WhatsAppIcon />
@@ -53,6 +58,7 @@ export function WhatsAppFloating() {
       href={whatsappLink()}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => registrarCliqueWhatsapp("botao-flutuante")}
       aria-label="Falar pelo WhatsApp"
       className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-primary-foreground shadow-lift transition-transform duration-300 hover:scale-105 md:hidden"
     >

@@ -1,8 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
 import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
-import { site, mensagens, whatsappLink } from "@/config/site";
+import { site, mensagens } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 
 const SEO_TITLE =
@@ -92,36 +94,8 @@ const etapas = [
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <div className="leading-tight">
-            <span className="block font-serif text-lg text-bordo">Jaqueline Laurindo</span>
-            <span className="eyebrow text-[0.6rem] text-muted-foreground">Advocacia</span>
-          </div>
-          <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-            <a href="#previdenciario" className="transition-colors hover:text-bordo">
-              Previdenciário
-            </a>
-            <a href="#sobre" className="transition-colors hover:text-bordo">
-              Sobre
-            </a>
-            <a href="#areas" className="transition-colors hover:text-bordo">
-              Outras áreas
-            </a>
-            <a href="#contato" className="transition-colors hover:text-bordo">
-              Contato
-            </a>
-          </nav>
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden rounded-full bg-bordo px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-bordo-deep md:inline-flex"
-          >
-            WhatsApp
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
+
 
       {/* HERO */}
       <section className="relative overflow-hidden">
@@ -144,7 +118,7 @@ function Index() {
               atendimento online para clientes de <strong>todo o Brasil</strong>.
             </p>
             <div className="mt-8">
-              <WhatsAppButton>Falar com a advogada pelo WhatsApp</WhatsAppButton>
+              <WhatsAppButton origem="home-hero">Falar com a advogada pelo WhatsApp</WhatsAppButton>
               <p className="mt-4 text-xs tracking-wide text-muted-foreground">
                 São Sebastião do Paraíso/MG&nbsp; | &nbsp;Atendimento online em todo o Brasil
               </p>
@@ -188,7 +162,7 @@ function Index() {
             </p>
           </div>
           <div className="mt-9">
-            <WhatsAppButton>Quero analisar meu caso</WhatsAppButton>
+            <WhatsAppButton origem="home-dor">Quero analisar meu caso</WhatsAppButton>
           </div>
         </div>
       </section>
@@ -223,7 +197,7 @@ function Index() {
           </div>
 
           <div className="mt-12 text-center">
-            <WhatsAppButton>Quero falar sobre meu benefício</WhatsAppButton>
+            <WhatsAppButton origem="home-previdenciario">Quero falar sobre meu benefício</WhatsAppButton>
           </div>
         </div>
       </section>
@@ -310,7 +284,7 @@ function Index() {
             ))}
           </div>
           <div className="mt-8">
-            <WhatsAppButton variant="outline" message={mensagens.geral}>
+            <WhatsAppButton variant="outline" origem="home-outras-areas" message={mensagens.geral}>
               Falar sobre outra área
             </WhatsAppButton>
           </div>
@@ -358,7 +332,7 @@ function Index() {
                 atendimento online para clientes de todo o Brasil.
               </p>
               <div className="mt-8">
-                <WhatsAppButton>Falar com a advogada</WhatsAppButton>
+                <WhatsAppButton origem="home-presencial">Falar com a advogada</WhatsAppButton>
               </div>
             </div>
             <div className="self-center">
@@ -386,7 +360,7 @@ function Index() {
             Seu caso merece uma análise individual.
           </p>
           <div className="mt-9">
-            <WhatsAppButton variant="light">Falar com a advogada</WhatsAppButton>
+            <WhatsAppButton variant="light" origem="home-chamada-final">Falar com a advogada</WhatsAppButton>
           </div>
         </div>
       </section>
@@ -424,21 +398,29 @@ function Index() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <WhatsAppButton className="w-full">WhatsApp</WhatsAppButton>
+              <WhatsAppButton className="w-full" origem="home-contato">
+                WhatsApp
+              </WhatsAppButton>
+              <Link
+                to="/contato"
+                className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-bordo/35 px-7 py-4 text-[0.95rem] font-semibold text-bordo transition-colors hover:bg-bordo hover:text-primary-foreground"
+              >
+                Enviar mensagem pelo formulário
+              </Link>
               {site.instagram ? (
                 <a
                   href={site.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-bordo/35 px-7 py-4 text-[0.95rem] font-semibold text-bordo transition-colors hover:bg-bordo hover:text-primary-foreground"
+                  className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-border px-7 py-4 text-[0.95rem] font-semibold text-foreground transition-colors hover:border-bordo/35 hover:text-bordo"
                 >
-                  Instagram
+                  {site.instagramHandle}
                 </a>
               ) : null}
               {site.email ? (
                 <a
                   href={`mailto:${site.email}`}
-                  className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-border px-7 py-4 text-[0.95rem] font-semibold text-foreground transition-colors hover:border-bordo/35 hover:text-bordo"
+                  className="inline-flex min-h-[52px] w-full items-center justify-center break-all rounded-full border border-border px-7 py-4 text-center text-[0.9rem] font-semibold text-foreground transition-colors hover:border-bordo/35 hover:text-bordo"
                 >
                   {site.email}
                 </a>
@@ -448,18 +430,8 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border py-8">
-        <div className="mx-auto max-w-5xl px-5 text-center text-xs leading-relaxed text-muted-foreground">
-          <p>
-            {site.nome} — Direito Previdenciário, Civil, Trabalhista e Imobiliário. {site.cidade}.
-          </p>
-          <p className="mt-2">
-            Este site tem caráter meramente informativo, em conformidade com o Código de
-            Ética e Disciplina da OAB. Não há captação de clientela nem promessa de
-            resultado.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
+
 
       <WhatsAppFloating />
     </div>
