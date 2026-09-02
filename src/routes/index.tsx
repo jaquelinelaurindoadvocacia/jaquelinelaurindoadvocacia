@@ -94,36 +94,8 @@ const etapas = [
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <div className="leading-tight">
-            <span className="block font-serif text-lg text-bordo">Jaqueline Laurindo</span>
-            <span className="eyebrow text-[0.6rem] text-muted-foreground">Advocacia</span>
-          </div>
-          <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-            <a href="#previdenciario" className="transition-colors hover:text-bordo">
-              Previdenciário
-            </a>
-            <a href="#sobre" className="transition-colors hover:text-bordo">
-              Sobre
-            </a>
-            <a href="#areas" className="transition-colors hover:text-bordo">
-              Outras áreas
-            </a>
-            <a href="#contato" className="transition-colors hover:text-bordo">
-              Contato
-            </a>
-          </nav>
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden rounded-full bg-bordo px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-bordo-deep md:inline-flex"
-          >
-            WhatsApp
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
+
 
       {/* HERO */}
       <section className="relative overflow-hidden">
