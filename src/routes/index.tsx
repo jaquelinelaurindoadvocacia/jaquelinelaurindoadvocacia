@@ -361,18 +361,17 @@ function Index() {
                 <WhatsAppButton>Falar com a advogada</WhatsAppButton>
               </div>
             </div>
-            <div className="grid gap-4 self-center">
-              <div className="rounded-2xl bg-secondary p-6">
-                <span className="eyebrow">Presencial</span>
-                <p className="mt-2 font-serif text-2xl text-bordo-deep">
-                  São Sebastião do Paraíso/MG
-                </p>
-              </div>
-              <div className="rounded-2xl bg-secondary p-6">
-                <span className="eyebrow">Online</span>
-                <p className="mt-2 font-serif text-2xl text-bordo-deep">Todo o Brasil</p>
-              </div>
+            <div className="self-center">
+              <img
+                src={fachadaImage.url}
+                loading="lazy"
+                width={1024}
+                height={1280}
+                alt="Fachada do escritório Jaqueline Laurindo Advocacia"
+                className="w-full rounded-2xl object-cover shadow-elegant"
+              />
             </div>
+
           </div>
         </div>
       </section>
