@@ -1,8 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
 import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
-import { site, mensagens, whatsappLink } from "@/config/site";
+import { site, mensagens } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 
 const SEO_TITLE =
