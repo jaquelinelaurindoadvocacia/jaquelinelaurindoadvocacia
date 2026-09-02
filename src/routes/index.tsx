@@ -154,12 +154,13 @@ function Index() {
           <div className="relative">
             <div className="absolute -bottom-4 -left-4 hidden h-full w-full rounded-[2rem] border border-bordo/25 sm:block" />
             <img
-              src={heroImage}
+              src={heroImage.url}
               width={1024}
               height={1280}
               alt="Jaqueline Laurindo, advogada previdenciária em São Sebastião do Paraíso/MG"
               className="relative w-full rounded-[2rem] object-cover shadow-lift"
             />
+
           </div>
         </div>
       </section>
@@ -232,7 +233,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative">
             <img
-              src={heroImage}
+              src={heroImage.url}
               loading="lazy"
               width={1024}
               height={1280}
@@ -240,6 +241,7 @@ function Index() {
               className="w-full rounded-[2rem] object-cover shadow-elegant"
             />
           </div>
+
           <div>
             <span className="eyebrow">Quem atende você</span>
             <h2 className="mt-4 font-serif text-4xl text-bordo-deep sm:text-5xl">
