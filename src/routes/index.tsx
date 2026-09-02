@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImage from "@/assets/jaqueline-hero.jpg";
+import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
+import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
 import { site, mensagens, whatsappLink } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
+
 
 const SEO_TITLE =
   "Jaqueline Laurindo Advocacia | Direito Previdenciário em São Sebastião do Paraíso";
@@ -152,12 +154,13 @@ function Index() {
           <div className="relative">
             <div className="absolute -bottom-4 -left-4 hidden h-full w-full rounded-[2rem] border border-bordo/25 sm:block" />
             <img
-              src={heroImage}
+              src={heroImage.url}
               width={1024}
               height={1280}
               alt="Jaqueline Laurindo, advogada previdenciária em São Sebastião do Paraíso/MG"
               className="relative w-full rounded-[2rem] object-cover shadow-lift"
             />
+
           </div>
         </div>
       </section>
@@ -230,7 +233,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative">
             <img
-              src={heroImage}
+              src={heroImage.url}
               loading="lazy"
               width={1024}
               height={1280}
@@ -238,6 +241,7 @@ function Index() {
               className="w-full rounded-[2rem] object-cover shadow-elegant"
             />
           </div>
+
           <div>
             <span className="eyebrow">Quem atende você</span>
             <h2 className="mt-4 font-serif text-4xl text-bordo-deep sm:text-5xl">
@@ -357,18 +361,17 @@ function Index() {
                 <WhatsAppButton>Falar com a advogada</WhatsAppButton>
               </div>
             </div>
-            <div className="grid gap-4 self-center">
-              <div className="rounded-2xl bg-secondary p-6">
-                <span className="eyebrow">Presencial</span>
-                <p className="mt-2 font-serif text-2xl text-bordo-deep">
-                  São Sebastião do Paraíso/MG
-                </p>
-              </div>
-              <div className="rounded-2xl bg-secondary p-6">
-                <span className="eyebrow">Online</span>
-                <p className="mt-2 font-serif text-2xl text-bordo-deep">Todo o Brasil</p>
-              </div>
+            <div className="self-center">
+              <img
+                src={fachadaImage.url}
+                loading="lazy"
+                width={1024}
+                height={1280}
+                alt="Fachada do escritório Jaqueline Laurindo Advocacia"
+                className="w-full rounded-2xl object-cover shadow-elegant"
+              />
             </div>
+
           </div>
         </div>
       </section>

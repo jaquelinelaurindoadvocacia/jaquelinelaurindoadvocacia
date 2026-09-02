@@ -9,7 +9,7 @@ export const site = {
   cidade: "São Sebastião do Paraíso/MG",
 
   /** Número do WhatsApp com DDI + DDD, apenas dígitos. Ex.: "5535999999999" */
-  whatsapp: "",
+  whatsapp: "5535997145067",
 
   /** Ex.: "https://instagram.com/seuperfil" */
   instagram: "",
@@ -18,7 +18,8 @@ export const site = {
   email: "",
 
   /** Ex.: "OAB/MG 000.000" */
-  oab: "",
+  oab: "OAB/MG 167.232",
+
 } as const;
 
 export const mensagens = {
