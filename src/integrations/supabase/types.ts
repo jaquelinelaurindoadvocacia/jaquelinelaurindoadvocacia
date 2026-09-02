@@ -14,7 +14,57 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      cliques_whatsapp: {
+        Row: {
+          created_at: string
+          id: string
+          origem: string
+          pagina: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          origem?: string
+          pagina?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          origem?: string
+          pagina?: string | null
+        }
+        Relationships: []
+      }
+      mensagens_contato: {
+        Row: {
+          assunto: string | null
+          created_at: string
+          email: string
+          id: string
+          mensagem: string
+          nome: string
+          telefone: string | null
+        }
+        Insert: {
+          assunto?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          mensagem: string
+          nome: string
+          telefone?: string | null
+        }
+        Update: {
+          assunto?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          mensagem?: string
+          nome?: string
+          telefone?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
