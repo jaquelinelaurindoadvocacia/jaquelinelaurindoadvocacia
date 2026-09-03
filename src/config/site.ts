@@ -11,6 +11,9 @@ export const site = {
   /** Número do WhatsApp com DDI + DDD, apenas dígitos. Ex.: "5535999999999" */
   whatsapp: "5535997145067",
 
+  /** Telefone formatado para exibição. Ex.: "(35) 99999-9999" */
+  telefone: "(35) 99714-5067",
+
   /** Ex.: "https://instagram.com/seuperfil" */
   instagram: "https://instagram.com/jaquelinelaurindoadvogada",
   instagramHandle: "@jaquelinelaurindoadvogada",
@@ -20,6 +23,14 @@ export const site = {
 
   /** Ex.: "OAB/MG 000.000" */
   oab: "OAB/MG 167.232",
+
+  /** Endereço completo do escritório */
+  endereco:
+    "Rua Salvador Grau, 58 - Centro - São Sebastião do Paraíso - MG, CEP 37950-032",
+
+  /** Link do Google Maps para o endereço */
+  mapsLink:
+    "https://www.google.com/maps/search/?api=1&query=Rua+Salvador+Grau,+58,+São+Sebastião+do+Paraíso+-+MG,+37950-032",
 
 } as const;
 

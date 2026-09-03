@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
+import atendimentoImage from "@/assets/atendimento-escritorio.jpg.asset.json";
 import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
 import { site, mensagens } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
@@ -207,11 +208,11 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative">
             <img
-              src={heroImage.url}
+              src={atendimentoImage.url}
               loading="lazy"
               width={1024}
               height={1280}
-              alt="Retrato da advogada Jaqueline Laurindo"
+              alt="Atendimento jurídico presencial no escritório Jaqueline Laurindo Advocacia"
               className="w-full rounded-[2rem] object-cover shadow-elegant"
             />
           </div>
