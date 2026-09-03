@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { whatsappLink } from "@/config/site";
 import { registrarCliqueWhatsapp } from "@/lib/tracking";
+import logoAsset from "@/assets/logo-cabecalho.jpg.asset.json";
 
 export function SiteHeader() {
   return (
