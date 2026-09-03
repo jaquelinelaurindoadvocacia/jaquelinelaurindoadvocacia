@@ -1,14 +1,20 @@
 import { Link } from "@tanstack/react-router";
 import { whatsappLink } from "@/config/site";
 import { registrarCliqueWhatsapp } from "@/lib/tracking";
+import logoAsset from "@/assets/logo-cabecalho.png.asset.json";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Link to="/" className="leading-tight">
-          <span className="block font-serif text-lg text-bordo">Jaqueline Laurindo</span>
-          <span className="eyebrow text-[0.6rem] text-muted-foreground">Advocacia</span>
+        <Link to="/" className="flex items-center">
+          <img
+            src={logoAsset.url}
+            alt="Jaqueline Laurindo Advocacia"
+            width={260}
+            height={48}
+            className="h-10 w-auto object-contain md:h-11"
+          />
         </Link>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <Link to="/" className="transition-colors hover:text-bordo">
