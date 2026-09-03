@@ -381,6 +381,38 @@ function Index() {
             <div className="rounded-2xl border border-border bg-card p-7">
               <h3 className="font-serif text-2xl text-bordo-deep">{site.nome}</h3>
               <dl className="mt-6 space-y-4 text-sm">
+                {site.endereco ? (
+                  <div>
+                    <dt className="eyebrow text-[0.6rem]">Endereço</dt>
+                    <dd className="mt-1 text-foreground">
+                      {site.mapsLink ? (
+                        <a
+                          href={site.mapsLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-bordo/30 underline-offset-4 hover:text-bordo"
+                        >
+                          {site.endereco}
+                        </a>
+                      ) : (
+                        site.endereco
+                      )}
+                    </dd>
+                  </div>
+                ) : null}
+                {site.telefone ? (
+                  <div>
+                    <dt className="eyebrow text-[0.6rem]">Telefone</dt>
+                    <dd className="mt-1 text-foreground">
+                      <a
+                        href={`tel:${site.telefone.replace(/\D/g, "")}`}
+                        className="hover:text-bordo"
+                      >
+                        {site.telefone}
+                      </a>
+                    </dd>
+                  </div>
+                ) : null}
                 <div>
                   <dt className="eyebrow text-[0.6rem]">Atendimento presencial</dt>
                   <dd className="mt-1 text-foreground">{site.cidade}</dd>
