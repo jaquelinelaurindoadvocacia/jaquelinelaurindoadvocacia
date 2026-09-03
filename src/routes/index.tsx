@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
+import atendimentoImage from "@/assets/atendimento-escritorio.jpg.asset.json";
 import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
 import { site, mensagens } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
@@ -207,11 +208,11 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative">
             <img
-              src={heroImage.url}
+              src={atendimentoImage.url}
               loading="lazy"
               width={1024}
               height={1280}
-              alt="Retrato da advogada Jaqueline Laurindo"
+              alt="Atendimento jurídico presencial no escritório Jaqueline Laurindo Advocacia"
               className="w-full rounded-[2rem] object-cover shadow-elegant"
             />
           </div>
@@ -380,6 +381,38 @@ function Index() {
             <div className="rounded-2xl border border-border bg-card p-7">
               <h3 className="font-serif text-2xl text-bordo-deep">{site.nome}</h3>
               <dl className="mt-6 space-y-4 text-sm">
+                {site.endereco ? (
+                  <div>
+                    <dt className="eyebrow text-[0.6rem]">Endereço</dt>
+                    <dd className="mt-1 text-foreground">
+                      {site.mapsLink ? (
+                        <a
+                          href={site.mapsLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-bordo/30 underline-offset-4 hover:text-bordo"
+                        >
+                          {site.endereco}
+                        </a>
+                      ) : (
+                        site.endereco
+                      )}
+                    </dd>
+                  </div>
+                ) : null}
+                {site.telefone ? (
+                  <div>
+                    <dt className="eyebrow text-[0.6rem]">Telefone</dt>
+                    <dd className="mt-1 text-foreground">
+                      <a
+                        href={`tel:${site.telefone.replace(/\D/g, "")}`}
+                        className="hover:text-bordo"
+                      >
+                        {site.telefone}
+                      </a>
+                    </dd>
+                  </div>
+                ) : null}
                 <div>
                   <dt className="eyebrow text-[0.6rem]">Atendimento presencial</dt>
                   <dd className="mt-1 text-foreground">{site.cidade}</dd>
