@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { whatsappLink } from "@/config/site";
-import { registrarCliqueWhatsapp } from "@/lib/tracking";
+import { registrarClique } from "@/lib/tracking";
+import { CalendarButton } from "@/components/CalendarButton";
 import logoAsset from "@/assets/logo-cabecalho.png";
 
 export function SiteHeader() {
@@ -35,15 +36,24 @@ export function SiteHeader() {
             Contato
           </Link>
         </nav>
-        <a
-          href={whatsappLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => registrarCliqueWhatsapp("menu-topo")}
-          className="hidden rounded-full bg-bordo px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-bordo-deep md:inline-flex"
-        >
-          WhatsApp
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <CalendarButton
+            variant="outline"
+            origem="header-agendamento"
+            className="px-5 py-2.5 text-sm"
+          >
+            Agendar
+          </CalendarButton>
+          <a
+            href={whatsappLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => registrarClique("header-whatsapp")}
+            className="rounded-full bg-bordo px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-bordo-deep"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
     </header>
   );

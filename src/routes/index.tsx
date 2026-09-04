@@ -4,6 +4,7 @@ import atendimentoImage from "@/assets/atendimento-escritorio.jpg";
 import fachadaImage from "@/assets/jaqueline-fachada.jpg";
 import { site, mensagens } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
+import { CalendarButton } from "@/components/CalendarButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -434,6 +435,9 @@ function Index() {
               <WhatsAppButton className="w-full" origem="home-contato">
                 WhatsApp
               </WhatsAppButton>
+              <CalendarButton className="w-full" origem="home-agendamento">
+                Agendar atendimento
+              </CalendarButton>
               <Link
                 to="/contato"
                 className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-bordo/35 px-7 py-4 text-[0.95rem] font-semibold text-bordo transition-colors hover:bg-bordo hover:text-primary-foreground"
