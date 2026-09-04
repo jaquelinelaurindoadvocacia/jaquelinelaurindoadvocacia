@@ -3,6 +3,7 @@ import { useState, type FormEvent } from "react";
 import { site } from "@/config/site";
 import { supabase } from "@/integrations/supabase/client";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
+import { CalendarButton } from "@/components/CalendarButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -248,6 +249,9 @@ function Contato() {
             <WhatsAppButton className="w-full" origem="contato-lateral">
               WhatsApp
             </WhatsAppButton>
+            <CalendarButton className="w-full" origem="contato-agendamento">
+              Agendar atendimento
+            </CalendarButton>
             <a
               href={site.instagram}
               target="_blank"
