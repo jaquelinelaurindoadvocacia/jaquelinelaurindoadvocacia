@@ -32,6 +32,9 @@ export const site = {
   mapsLink:
     "https://www.google.com/maps/search/?api=1&query=Rua+Salvador+Grau,+58,+São+Sebastião+do+Paraíso+-+MG,+37950-032",
 
+  /** Link de agendamento pelo Google Calendar */
+  calendarLink: "https://calendar.app.google/zCCyeWaTEon9bhuAA",
+
 } as const;
 
 export const mensagens = {
