@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImage from "@/assets/jaqueline-hero.jpg.asset.json";
-import atendimentoImage from "@/assets/atendimento-escritorio.jpg.asset.json";
-import fachadaImage from "@/assets/jaqueline-fachada.jpg.asset.json";
+import heroImage from "@/assets/jaqueline-hero.jpg";
+import atendimentoImage from "@/assets/atendimento-escritorio.jpg";
+import fachadaImage from "@/assets/jaqueline-fachada.jpg";
 import { site, mensagens } from "@/config/site";
 import { WhatsAppButton, WhatsAppFloating } from "@/components/WhatsAppButton";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -129,7 +129,7 @@ function Index() {
           <div className="relative">
             <div className="absolute -bottom-4 -left-4 hidden h-full w-full rounded-[2rem] border border-bordo/25 sm:block" />
             <img
-              src={heroImage.url}
+              src={heroImage}
               width={1024}
               height={1280}
               alt="Jaqueline Laurindo, advogada previdenciária em São Sebastião do Paraíso/MG"
@@ -208,7 +208,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="relative">
             <img
-              src={atendimentoImage.url}
+              src={atendimentoImage}
               loading="lazy"
               width={1024}
               height={1280}
@@ -338,7 +338,7 @@ function Index() {
             </div>
             <div className="self-center">
               <img
-                src={fachadaImage.url}
+                src={fachadaImage}
                 loading="lazy"
                 width={1024}
                 height={1280}
