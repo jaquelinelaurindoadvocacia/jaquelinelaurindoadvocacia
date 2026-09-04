@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { whatsappLink } from "@/config/site";
 import { registrarCliqueWhatsapp } from "@/lib/tracking";
-import logoAsset from "@/assets/logo-cabecalho.png.asset.json";
+import logoAsset from "@/assets/logo-cabecalho.png";
 
 export function SiteHeader() {
   return (
@@ -9,7 +9,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link to="/" className="flex items-center">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Jaqueline Laurindo Advocacia"
             width={260}
             height={48}
